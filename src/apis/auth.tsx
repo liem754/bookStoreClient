@@ -10,13 +10,13 @@ export interface ReqLogin {
 }
 export const resgister = (data: data) =>
   axios({
-    url: "http://localhost:5000/api/v1/auth/register",
+    url: "https://bookstoresv.onrender.com/api/v1/auth/register",
     method: "post",
     data,
   });
 export const finalresgister = (data: data) =>
   axios({
-    url: "http://localhost:5000/api/v1/auth/final",
+    url: "https://bookstoresv.onrender.com/api/v1/auth/final",
     method: "put",
     data,
   });
