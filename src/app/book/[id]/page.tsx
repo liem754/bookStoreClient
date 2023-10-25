@@ -17,8 +17,8 @@ function View() {
     }
   };
   useEffect(() => {
-    param.id && fetch(+param.id);
-  }, [+param.id]);
+    param.id && fetch(param.id);
+  }, [param.id]);
   const handleCart = async () => {
     const rs = await updateCart({
       pid: book?.id,
