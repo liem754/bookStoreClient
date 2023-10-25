@@ -22,7 +22,7 @@ export const finalresgister = (data: data) =>
   });
 export const login = (data: ReqLogin) =>
   axios({
-    url: "http://localhost:5000/api/v1/auth/login",
+    url: "https://bookstoresv.onrender.com/api/v1/auth/login",
     method: "post",
     data,
   });
