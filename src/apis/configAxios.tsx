@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://bookstoresv.onrender.com",
 });
 // Thêm một bộ đón chặn request
 instance.interceptors.request.use(

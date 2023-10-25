@@ -1,4 +1,4 @@
-import book from "@/types/book";
+import { book } from "@/types/book";
 import { formatCurrencyVND } from "@/ultils/custom";
 import { type } from "os";
 
