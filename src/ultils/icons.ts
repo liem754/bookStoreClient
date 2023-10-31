@@ -1,4 +1,5 @@
 import { BsImage } from "react-icons/bs";
+import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 export const Icons = {
   // GiShoppingCart,
   // BsPhone,
@@ -33,6 +34,8 @@ export const Icons = {
   // BiDotsHorizontalRounded,
   // AiOutlineSearch,
   BsImage,
+  AiOutlineStar,
+  AiFillStar,
 };
 
 export const list = [
