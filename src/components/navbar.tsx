@@ -13,6 +13,7 @@ import logo from "@/access/logo2.png";
 import Swal from "sweetalert2";
 import Image from "next/image";
 import { getBookbycategory } from "@/apis/book";
+import { log } from "console";
 function Navbar() {
   const dispatch = useDispatch<ThunkDispatch<any, any, AnyAction>>();
   const { isLoggedIn } = useSelector((state: any) => state.auth);
@@ -29,10 +30,7 @@ function Navbar() {
     };
   }, [isLoggedIn]);
   const ft = async () => {
-    console.log("noo");
-
     const rs = await getOne();
-    console.log(rs);
     // if(rs.data.err===0){
 
     // }
@@ -53,7 +51,7 @@ function Navbar() {
   }, []);
   useEffect(() => {
     const t = setTimeout(() => {
-      if (!no && isLoggedIn) {
+      if (!no && !userData && isLoggedIn === true) {
         Swal.fire(
           "Oops!",
           "Phiên đăng nhập hết hạn vui lòng đăng nhập",
@@ -66,7 +64,8 @@ function Navbar() {
     return () => {
       clearTimeout(t);
     };
-  }, []);
+  }, [no]);
+  console.log(no);
 
   const path = usePathname();
 
