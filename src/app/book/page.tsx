@@ -33,7 +33,7 @@ function Book() {
   // const [params] = useSearchParams();
 
   const fetch = async (query: any) => {
-    const rs = await getBooks({ ...query });
+    const rs = await getBooks({ ...query, limit: 6 });
     if (rs?.data.err === 0) {
       setBooks(rs?.data);
     }
