@@ -105,22 +105,22 @@ function Book() {
                 Tất Cả
               </option>
 
-              <option className=" text-lg" value="lap trinh">
+              <option className=" text-lg" value="Lập">
                 Lập Trình
               </option>
-              <option className=" text-lg" value="tieng anh">
+              <option className=" text-lg" value="Tiếng">
                 Tiếng Anh
               </option>
-              <option className=" text-lg" value="tieu thuyet">
+              <option className=" text-lg" value="Tiểu">
                 Tiểu Thuyết
               </option>
-              <option className=" text-lg" value="khoa hoc vien tuong">
+              <option className=" text-lg" value="Khoa">
                 Khoa Học Viễn Tưởng
               </option>
-              <option className=" text-lg" value="kinh di">
+              <option className=" text-lg" value="Kinh">
                 Kinh Dị
               </option>
-              <option className=" text-lg" value="lang mang">
+              <option className=" text-lg" value="Lãng">
                 Lãng Mạng
               </option>
             </select>
