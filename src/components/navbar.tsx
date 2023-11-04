@@ -17,6 +17,7 @@ function Navbar() {
   const dispatch = useDispatch<ThunkDispatch<any, any, AnyAction>>();
   const { isLoggedIn } = useSelector((state: any) => state.auth);
   const { userData, mes } = useSelector((state: any) => state.user);
+  const [no, setNo] = useState(false);
 
   useEffect(() => {
     const tim = setTimeout(() => {
@@ -28,23 +29,40 @@ function Navbar() {
     };
   }, [isLoggedIn]);
   const ft = async () => {
+    console.log("noo");
+
     const rs = await getOne();
     console.log(rs);
+    // if(rs.data.err===0){
 
-    if (rs.data.err === -1) {
-      Swal.fire(
-        "Oops!",
-        "Phiên đăng nhập hết hạn vui lòng đăng nhập",
-        "warning"
-      ).then(() => {
-        dispatch(logout());
-      });
+    // }
+
+    if (rs.data.err !== 0) {
+      setNo(false);
+    } else {
+      setNo(true);
     }
   };
   useEffect(() => {
     const t = setTimeout(() => {
       ft();
     }, 3000);
+    return () => {
+      clearTimeout(t);
+    };
+  }, []);
+  useEffect(() => {
+    const t = setTimeout(() => {
+      if (!no) {
+        Swal.fire(
+          "Oops!",
+          "Phiên đăng nhập hết hạn vui lòng đăng nhập",
+          "warning"
+        ).then(() => {
+          dispatch(logout());
+        });
+      }
+    }, 4000);
     return () => {
       clearTimeout(t);
     };
