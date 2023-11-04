@@ -29,6 +29,7 @@ function Navbar() {
   }, [isLoggedIn]);
   const ft = async () => {
     const rs = await getOne();
+    console.log(rs);
 
     if (rs.data.err === -1) {
       Swal.fire(
