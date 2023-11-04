@@ -53,7 +53,7 @@ function Navbar() {
   }, []);
   useEffect(() => {
     const t = setTimeout(() => {
-      if (!no) {
+      if (!no && isLoggedIn) {
         Swal.fire(
           "Oops!",
           "Phiên đăng nhập hết hạn vui lòng đăng nhập",
