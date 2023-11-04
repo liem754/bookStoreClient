@@ -29,9 +29,8 @@ function Navbar() {
   }, [isLoggedIn]);
   const ft = async () => {
     const rs = await getOne();
-    console.log(rs);
 
-    if (rs.data.err !== 0) {
+    if (rs.data.err === -1) {
       Swal.fire(
         "Oops!",
         "Phiên đăng nhập hết hạn vui lòng đăng nhập",
