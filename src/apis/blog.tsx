@@ -7,7 +7,7 @@ export const createBlog = (data: any) =>
   });
 export const getBlogs = (params: any) =>
   axios({
-    url: "/api/v1/blog/all",
+    url: "/api/v1/blog/",
     method: "get",
     params,
   });
