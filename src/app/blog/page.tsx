@@ -17,7 +17,18 @@ function Blog() {
   }, []);
   console.log(blog);
 
-  return <div className="">blog</div>;
+  return (
+    <div className="p-4">
+      {blog?.map((item: any) => (
+        <div key={item?.id} className="">
+          <img src={item?.images} alt="" />
+          <div className="p-2">
+            <h2>{item?.title}</h2>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 }
 
 export default Blog;
