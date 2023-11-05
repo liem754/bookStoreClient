@@ -28,7 +28,11 @@ function Blog() {
   console.log(blog);
 
   return (
-    <div className="p-16 flex flex-wrap gap-4">
+    <div
+      className={` ${
+        blog.length === 0 ? "py-40" : ""
+      } p-16 flex flex-wrap gap-4`}
+    >
       {blog?.map((item: any) => (
         <div
           onClick={() => {

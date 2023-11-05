@@ -15,13 +15,17 @@ function BlogItem() {
     fetch(param?.id);
   }, [param?.id]);
   return (
-    <div className="p-4 flex flex-col justify-center items-center">
+    <div
+      className={`${
+        blog.length === 0 ? "py-40" : ""
+      }p-4 flex flex-col justify-center items-center`}
+    >
       <h2 className="text-2xl font-medium text-center">{blog?.title}</h2>
       <div className="flex justify-center items-center">
         <img src={blog?.images} alt="" className="w-[70%]" />
       </div>
       <div className="p-4 w-[70%] flex flex-col gap-4">
-        {blog?.description?.split(".  ")?.map((item: any) => (
+        {blog?.description?.split(".@")?.map((item: any) => (
           <h2 className=" text-justify" key={item}>
             {`${item}.`}
           </h2>
