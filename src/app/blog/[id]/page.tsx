@@ -17,7 +17,7 @@ function BlogItem() {
   return (
     <div
       className={`${
-        blog.length === 0 ? " h-screen" : ""
+        Object.keys(blog).length === 0 ? " h-screen" : ""
       }p-4 flex flex-col justify-center items-center`}
     >
       <h2 className="text-2xl font-medium text-center my-9">{blog?.title}</h2>
