@@ -10,19 +10,19 @@ export interface ReqLogin {
 }
 export const resgister = (data: data) =>
   axios({
-    url: "https://bookstoresv.onrender.com/api/v1/auth/register",
+    url: "https://api-bookstore-g9ae.onrender.com/api/v1/auth/register",
     method: "post",
     data,
   });
 export const finalresgister = (data: data) =>
   axios({
-    url: "https://bookstoresv.onrender.com/api/v1/auth/final",
+    url: "https://api-bookstore-g9ae.onrender.com/api/v1/auth/final",
     method: "put",
     data,
   });
 export const login = (data: ReqLogin) =>
   axios({
-    url: "https://bookstoresv.onrender.com/api/v1/auth/login",
+    url: "https://api-bookstore-g9ae.onrender.com/api/v1/auth/login",
     method: "post",
     data,
   });
