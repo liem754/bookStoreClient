@@ -15,12 +15,16 @@ function BlogItem() {
     fetch(param?.id);
   }, [param?.id]);
   return (
-    <div className="p-4">
+    <div className="p-4 flex flex-col justify-center items-center">
       <h2 className="text-2xl font-medium text-center">{blog?.title}</h2>
       <div className="flex justify-center items-center">
         <img src={blog?.images} alt="" className="w-[70%]" />
       </div>
-      <div className="p-4">{blog?.description}</div>
+      <div className="p-4 w-[70%]">
+        {blog?.description?.split("  ")?.map((item: any) => (
+          <h2 key={item}>{item}</h2>
+        ))}
+      </div>
     </div>
   );
 }
