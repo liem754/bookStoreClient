@@ -20,9 +20,11 @@ function BlogItem() {
       <div className="flex justify-center items-center">
         <img src={blog?.images} alt="" className="w-[70%]" />
       </div>
-      <div className="p-4 w-[70%]">
+      <div className="p-4 w-[70%] flex flex-col gap-4">
         {blog?.description?.split("  ")?.map((item: any) => (
-          <h2 key={item}>{item}</h2>
+          <h2 className=" text-justify" key={item}>
+            {item}
+          </h2>
         ))}
       </div>
     </div>
