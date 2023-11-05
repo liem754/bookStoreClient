@@ -28,7 +28,7 @@ function Blog() {
   console.log(blog);
 
   return (
-    <div className="p-8 flex flex-wrap gap-4">
+    <div className="p-16 flex flex-wrap gap-4">
       {blog?.map((item: any) => (
         <div
           onClick={() => {

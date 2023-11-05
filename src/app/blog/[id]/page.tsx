@@ -8,7 +8,7 @@ function BlogItem() {
   const fetch = async (params: any) => {
     const rs = await getBlog(params);
     if (rs.data.err === 0) {
-      setBlog(rs.data.data);
+      setBlog(rs.data.blog);
     }
   };
   useEffect(() => {
