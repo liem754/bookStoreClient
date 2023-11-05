@@ -1,10 +1,15 @@
 "use client";
-
+import {
+  useRouter,
+  usePathname,
+  useSearchParams,
+  useParams,
+} from "next/navigation";
 import { getBlogs } from "@/apis/blog";
-import { useSearchParams } from "next/dist/client/components/navigation";
 import { useEffect, useState } from "react";
 
 function Blog() {
+  const router = useRouter();
   const param: any = useSearchParams();
   const [blog, setBlog] = useState<any>([]);
   const fetch = async (params: any) => {
@@ -23,9 +28,15 @@ function Blog() {
   console.log(blog);
 
   return (
-    <div className="p-4 flex gap-4">
+    <div className="p-8 flex flex-wrap gap-4">
       {blog?.map((item: any) => (
-        <div key={item?.id} className="w-[30%]">
+        <div
+          onClick={() => {
+            router.push(`/blog/${item?.id}`);
+          }}
+          key={item?.id}
+          className="w-[32%]"
+        >
           <img src={item?.images} alt="" className="w-full" />
           <div className="p-2">
             <h2 className="text-center font-semibold line-clamp-2 overflow-ellipsis">

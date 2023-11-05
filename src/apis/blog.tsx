@@ -11,3 +11,8 @@ export const getBlogs = (params: any) =>
     method: "get",
     params,
   });
+export const getBlog = (params: any) =>
+  axios({
+    url: "/api/v1/blog/" + params,
+    method: "get",
+  });
