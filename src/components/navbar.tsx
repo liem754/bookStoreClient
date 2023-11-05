@@ -99,13 +99,22 @@ function Navbar() {
               Cart
             </Link>
             {userData?.roleData?.value === "Admin" && (
-              <Link
-                href={"/admin/manager"}
-                className="text-lg cursor-pointer font-medium py-2 hover:border-r-8
+              <>
+                <Link
+                  href={"/admin/manager"}
+                  className="text-lg cursor-pointer font-medium py-2 hover:border-r-8
             hover:text-white"
-              >
-                ManagerBook
-              </Link>
+                >
+                  ManagerBook
+                </Link>
+                <Link
+                  href={"/admin/createblog"}
+                  className="text-lg cursor-pointer font-medium py-2 hover:border-r-8
+           hover:text-white"
+                >
+                  Create Blog
+                </Link>
+              </>
             )}
             <Link
               href={"/"}
@@ -134,6 +143,12 @@ function Navbar() {
               >
                 Book
               </div>
+              <Link
+                href="/blog"
+                className="text-lg font-medium  py-2 hover:border-r-8 hover:text-white"
+              >
+                Blog
+              </Link>
             </div>
             <div className=" w-full pl-8 pt-3 pb-6 flex flex-col gap-4 justify-start border-b">
               {userData?.roleData?.code === "R1" && (
