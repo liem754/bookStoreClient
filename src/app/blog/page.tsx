@@ -12,8 +12,11 @@ function Blog() {
     }
   };
   useEffect(() => {
-    const query = { ...param };
-    fetch(query);
+    const queris: any = {};
+    for (let i of param) queris[i[0]] = i[1];
+
+    const q = { ...queris };
+    fetch(q);
   }, []);
   console.log(blog);
 
