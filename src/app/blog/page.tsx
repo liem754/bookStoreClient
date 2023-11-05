@@ -1,3 +1,5 @@
+"use client";
+
 import { getBlogs } from "@/apis/blog";
 import { useSearchParams } from "next/dist/client/components/navigation";
 import { useEffect, useState } from "react";
