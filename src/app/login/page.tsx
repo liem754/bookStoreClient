@@ -66,7 +66,7 @@ function Login() {
 
         <button
           onClick={handle}
-          className=" mt-7  outline-none border-none text-white bg-blue-600 hover:bg-blue-500 py-2"
+          className=" mt-7 flex justify-center items-center  outline-none border-none text-white bg-blue-600 hover:bg-blue-500 py-2"
         >
           {load ? (
             <div className="flex flex-row gap-2 py-2 px-4 ">

@@ -151,7 +151,7 @@ function Navbar() {
               </Link>
             </div>
             <div className=" w-full pl-8 pt-3 pb-6 flex flex-col gap-4 justify-start border-b">
-              {userData?.roleData?.code === "R1" && (
+              {userData?.roleData?.code === "R1" && isLoggedIn && (
                 <Link
                   href="/create"
                   className="text-lg font-medium  py-2 hover:border-r-8 hover:text-white"

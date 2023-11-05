@@ -48,7 +48,6 @@ function CreateBlog() {
     else delete data.images;
 
     for (let i of Object.entries(data)) formData.append(i[0], i[1]);
-    // for (let i of Object.entries(data)) console.log(i);
 
     const rs = await createBlog(formData);
 
