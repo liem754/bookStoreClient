@@ -17,10 +17,10 @@ function BlogItem() {
   return (
     <div
       className={`${
-        blog.length === 0 ? "py-40" : ""
+        blog.length === 0 ? " h-screen" : ""
       }p-4 flex flex-col justify-center items-center`}
     >
-      <h2 className="text-2xl font-medium text-center">{blog?.title}</h2>
+      <h2 className="text-2xl font-medium text-center my-9">{blog?.title}</h2>
       <div className="flex justify-center items-center">
         <img src={blog?.images} alt="" className="w-[70%]" />
       </div>

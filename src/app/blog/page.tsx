@@ -30,7 +30,7 @@ function Blog() {
   return (
     <div
       className={` ${
-        blog.length === 0 ? "py-40" : ""
+        blog.length === 0 ? " h-screen" : ""
       } p-16 flex flex-wrap gap-4`}
     >
       {blog?.map((item: any) => (
